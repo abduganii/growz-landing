@@ -1,0 +1,27 @@
+@use 'mixin' as mixin;
+
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+body{
+  overflow-x: hidden;
+  background-color: #EFEFEF;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+
+
+*{
+  border: 0;
+  box-sizing: border-box;
+  padding: 0;
+}
