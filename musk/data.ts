@@ -1,5 +1,3 @@
-import { ApplicationIcons, FeedbackIcons, MaterialsIcons, ProfileIcons, RecommendationsIcons } from "@/components/icons";
-
 export const LangArr = [
     {
       id: 1,
@@ -244,42 +242,3 @@ export const LangArr = [
     }
   ]
 
-
-  export const ProfileLayoutArr = [
-    {
-        id:1,
-        text:'Personal-information',
-        link:'/profile/information',
-        icons: ()=> ProfileIcons()
-    },
-    {
-        id:2,
-        text:'My-materials',
-        link:'/profile/materials',
-        icons: ()=> MaterialsIcons()
-    },
-    {
-        id:3,
-        text:'Recommendations',
-        link:'/profile/recommendations',
-        icons: ()=> RecommendationsIcons()
-    },
-    {
-        id:4,
-        text:'Feedback',
-        link:'/profile/feedback',
-        icons: ()=> FeedbackIcons()
-    },
-    {
-        id:5,
-        text:'Cooperation',
-        link:'/profile/cooperation',
-        icons: ()=> ApplicationIcons()
-    },
-    {
-        id:6,
-        text:'Notification',
-        link:'/profile/notifications',
-        icons: ()=> ApplicationIcons()
-    },
-]
