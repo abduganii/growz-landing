@@ -1,11 +1,22 @@
+'use client'
 import Container from '@/components/container'
 import React from 'react'
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export default function FormSEction() {
+  gsap.registerPlugin(ScrollTrigger);
+  useGSAP(() => {
+    gsap.to(".from", { opacity: 1, duration: 1,delay:0.5, ease: "power1.inOut",scrollTrigger: {
+      toggleActions: 'restart none none reset',
+      trigger: '.from',
+    }})
+  }); 
   return (
-    <Container>
-        <div className='py-[49px] px-[70px] flex gap-[32px] bg-no-repeat bg-center bg-cover  rounded-[42px] ' style={{"backgroundImage":`url('/image.jfif')`}}>
-            <div className='w-full max-w-[366px]'>
+    <Container className='from opacity-0'>
+        <div className='py-[20px] px-[30px] md:py-[49px] md:px-[70px] flex md:flex-row flex-col gap-[32px] bg-no-repeat bg-center bg-cover  rounded-[42px] ' style={{"backgroundImage":`url('/image.jfif')`}}>
+            <div className='w-full md:max-w-[366px]'>
                 <a target="_blank" href='+998951454545' className='inline-block w-full mb-4 px-[50px] py-[20px] text-white bg-[#53B606] rounded-[30px]'>
                     <p className='font-bold text-[20px] mb-1 leading-[28px]'>growzgmail.com</p>
                     <p className='font-bold text-[20px] leading-[28px]'>+99895 145-45-45</p>
