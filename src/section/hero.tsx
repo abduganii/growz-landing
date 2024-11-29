@@ -1,7 +1,7 @@
 
 import Lang from '@/components/lang/lang'
-import Container from '@/components/lang/container'
-import { InstaIcons, NavigateIcons } from '@/components/lang/icons'
+import Container from '@/components/container'
+import { InstaIcons, NavigateIcons } from '@/components/icons'
 import Image from 'next/image'
 import React from 'react'
 

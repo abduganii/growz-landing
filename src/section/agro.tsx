@@ -1,5 +1,5 @@
-import Container from '@/components/lang/container'
-import { AgroIcons } from '@/components/lang/icons'
+import Container from '@/components/container'
+import { AgroIcons } from '@/components/icons'
 import Image from 'next/image'
 import React from 'react'
 

@@ -1,6 +1,6 @@
 import BarChart from '@/components/bar-chart'
 import GrowzCard from '@/components/growz-card'
-import Container from '@/components/lang/container'
+import Container from '@/components/container'
 import PieChart from '@/components/pie-chart'
 import AgroSection from '@/section/agro'
 import FermerSection from '@/section/fermer'

@@ -1,5 +1,5 @@
 import React from 'react'
-import Container from './lang/container'
+import Container from './container'
 import Image from 'next/image'
 
 export default function Footer() {

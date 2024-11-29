@@ -4,7 +4,7 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import React from 'react'
-import { DownIcons } from '../icons'
+import { DownIcons } from '../../icons'
 
 import ru from "../../../../public/lang/ru.png"
 import uz from "../../../../public/lang/uz.png"
