@@ -11,7 +11,7 @@ export default function Header() {
         <Container >
             <div className='bg-white w-full flex gap-[10px] items-center  rounded-3xl py-[19px] px-[39px] justify-between'>
                  <Link href={'/'}><Image src={'/logo.svg'} width={136} height={36} alt='img'/></Link>
-                 <div className='flex items-center lg:ml-[-40px]  gap-2 md:gap-[20px] lg:gap-[60px]'>
+                 <div className='flex items-center lg:ml-[-60px]  gap-2 md:gap-[20px] lg:gap-[60px]'>
                     <Link className='font-normal text-[12px] leading-[18px] md:text-[18px] md:leading-[24px] text-[#1B1B1B]' href={'/'}>Главная</Link>
                     <Link className='font-normal text-[12px] leading-[18px] md:text-[18px] md:leading-[24px] text-[#1B1B1B]' href={'/news'}>Новости</Link>
                  </div>
