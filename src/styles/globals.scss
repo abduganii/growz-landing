@@ -10,6 +10,7 @@ body{
 }
 html {
   scroll-behavior: smooth;
+  background-color: #EFEFEF !important;
 }
 
 button:disabled {
@@ -25,3 +26,20 @@ button:disabled {
   box-sizing: border-box;
   padding: 0;
 }
+
+.colm1{
+  width: calc((100% - 20px) / 3);
+}
+
+@media screen and (max-width:1000px) {
+  
+.colm1{
+  width: calc((100% - 10px) / 2);
+}
+}
+@media screen and (max-width:500px) {
+  
+  .colm1{
+    width: 100%;
+  }
+  }

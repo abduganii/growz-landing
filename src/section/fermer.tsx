@@ -21,7 +21,7 @@ export default function FermerSection() {
   return (
     <Container className='mt-[40px] fermet opacity-0 flex md:flex-row flex-col-reverse  gap-4'>
         <div className='w-full bg-white   rounded-2xl border-solid border-[#53B606] border pt-[40px] pb-[88px] px-[35px] '>
-            <h3 className='font-semibold  w-full max-w-[767px] mb-6 text-[18px] leading-[26px] md:text-[23px] md:leading-[30px] xl:text-[29px] xl:leading-[33px] flex items-center text-[#2A2A2A]'>Интерактивная поддержка  <MenIcons/>  фермера</h3>
+            <h3 className='font-semibold  w-full max-w-[767px] mb-6 text-[18px] leading-[26px] md:text-[23px] md:leading-[30px] xl:text-[29px] xl:leading-[37.8px] flex items-center text-[#2A2A2A]'>Интерактивная поддержка  <span className='px-1'>  <MenIcons/> </span>   фермера</h3>
             <p className='flex items-start gap-4 font-medium leading-[18px] md:text-[16px] md:leading-[20px] xl:text-[18px] xl:leading-[26px] mt-[16px] w-full maxm-w-[735px]' ><span className='w-[32px] min-[32px]'><AgroIcons1/> </span>Алгоритмы, помогут фермерам с агротехническими действиями
             на каждом этапе роста урожая.</p>
             <p className='flex items-start gap-4 font-medium leading-[18px] md:text-[16px] md:leading-[20px] xl:text-[18px] xl:leading-[26px] mt-[16px] w-full maxm-w-[735px]' ><span className='w-[32px] min-[32px]'><AgroIcons2/> </span> Консультации на базе ИИ для идентификации вредителей и заболеваний,

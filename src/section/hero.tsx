@@ -18,8 +18,8 @@ useGSAP(() => {
   return (
       <div  className='relative  top w-full py-[84px] bg-no-repeat bg-top bg-cover 2xl:px-[92px] rounded-b-[42px]  3xl:h-screen' style={{"backgroundImage":`url('/neture.png')`}}>
           <Container className='here opacity-0'  >
-            <div className='bg-[#EFEFEF] p-[30px]  rounded-[42px]'>
-              <div className='bg-[#FFFFFF] frame p-[30px] pb-[17px] rounded-[42px] relative'>
+            <div className='bg-[#EFEFEF] p-[30px] ]  rounded-[42px]'>
+              <div className='bg-[#FFFFFF] frame p-[30px] pr-[43px] pb-[17px] rounded-[42px] relative'>
                 <div className='mb-[56px] flex justify-between items-center' >
                   <Image src={'/logo.svg'} width={136} height={36} alt='img'/>
                   <Lang/>
@@ -35,7 +35,7 @@ useGSAP(() => {
                       <p className='text-[#2A2A2A] font-normal text-[14px] leading-[18px]  md:text-[17px] md:leading-[22px] xl:text-[20px] xl:leading-[27px] '>
                       <span className='text-[#1AA95B] font-semibold text-[16px] leading-[20px]  md:text-[18px] md:leading-[24px] xl:text-[24px] xl:leading-[32px] '>Growz</span> — это лучшая цифровая платформа для мелких фермеров, разработанная для повышения производительности, устойчивости и доступа к рынку.
 
-                          <p className='mt-[15px]'> Независимо от того, управляете ли вы урожаем, ищете индивидуальные советы по ведению сельского хозяйства или ищете лучшие предложения по удобрениям и агрохимикатам,<span className='text-[#1AA95B]'>Growz</span>  здесь поможет вам во всем</p>
+                          <p className='mt-[15px]'> Независимо от того, управляете ли вы урожаем, ищете индивидуальные советы по ведению сельского хозяйства или ищете лучшие предложения по удобрениям и агрохимикатам, <span className='text-[#1AA95B] font-bold'>Growz</span>  здесь поможет вам во всем</p>
                       </p>
                     </div>
                 </div>
