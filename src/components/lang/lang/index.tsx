@@ -28,7 +28,7 @@ export default function Lang() {
     <div className="relative">
           <div 
             onClick={()=>setOpen(!open)} 
-            className='flex items-center rounded-xl  border-[1px] border-solid cursor-pointer border-[#23C16B] gap-[1px]  py-[3px] px-[9px]' 
+            className='flex items-center rounded-xl  border-[1px] border-solid cursor-pointer border-[#23C16B] gap-1  py-[3px] px-[9px]' 
             >
              {t('lang')}
             <DownIcons color='black'/>

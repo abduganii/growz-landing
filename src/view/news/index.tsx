@@ -21,7 +21,7 @@ export default function NewsPage() {
     <Container >
       <div className='w-full bg-white py-[21px] px-[24px] rounded-[42px] mt-[20px]'>
         <h3 className='font-semibold leading-[38px] text-[32px] mb-[32px] '>Новости</h3>
-          <div className='w-full flex-wrap gap-[10px] flex '>
+          <div className='w-full flex-wrap gap-[24px] flex '>
           <NewsCard link={'/news/1'} className={'colm1'} image={'/news.jpg'} title={"title"} text={"text"} date={'24.09.2024'}/>
           <NewsCard link={'/news/1'} className={'colm1'} image={'/news.jpg'} title={"title"} text={"text"} date={'24.09.2024'}/>
           <NewsCard link={'/news/1'} className={'colm1'} image={'/news.jpg'} title={"title"} text={"text"} date={'24.09.2024'}/>
