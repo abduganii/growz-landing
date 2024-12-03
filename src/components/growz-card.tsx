@@ -8,9 +8,10 @@ export default function GrowzCard({className,image,title,text}:any) {
   useGSAP(() => {
     gsap.to(".cardImge",  
       { 
-        rotation: 3600, // Rotate 360 degrees
-        duration: 20,   // Animation duration in seconds
-        repeat: -1,    // Infinite loop
+        rotationY: 3600,
+        duration: 20, 
+        repeat: -1,   
+        
         ease: 'linear'
       })
     }); 

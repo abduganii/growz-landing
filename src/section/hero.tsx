@@ -3,12 +3,14 @@ import Lang from '@/components/lang/lang'
 import Container from '@/components/container'
 import { InstaIcons, NavigateIcons } from '@/components/icons'
 import Image from 'next/image'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Link } from '@/i18n/routing'
 
-export default function HeroSection() {
+
+export default function HeroSection({data}:any) {
+  console.log(data)
 useGSAP(() => {
   let tl = gsap.timeline();
   tl.fromTo(".here",{opacity:0,x:-15,y:25}, { opacity: 1,x:0,y:0, duration: .4,ease: "power2.out"})
@@ -16,6 +18,17 @@ useGSAP(() => {
     .fromTo(".box", {opacity:0,},{opacity: 1, duration: .4,ease: "power2.out"});
   
 }); 
+
+const [embedUrl,setEmbedUrl] = useState('')
+useEffect(()=>{
+
+    if(data?.hero_video){
+        const videoId = data?.hero_video.includes('v=') 
+        ? data?.hero_video.split('v=')[1].split('&')[0]  // Extract video ID from regular data?.hero_video
+        : data?.hero_video.split('/').pop()?.split('?')[0]; // Extract from shortened URL, ignore query params
+      setEmbedUrl(`https://www.youtube.com/embed/${videoId}`)
+    }
+},[data])
   return (
       <div  className='relative  top w-full py-[84px] bg-no-repeat bg-top bg-cover 2xl:px-[92px] rounded-b-[42px]  3xl:h-screen' style={{"backgroundImage":`url('/neture.png')`}}>
           <Container className='here opacity-0'  >
@@ -23,10 +36,20 @@ useGSAP(() => {
               <div className='bg-[#FFFFFF] frame p-[30px] pr-[43px] pb-[17px] rounded-[42px] relative'>
                 <div className='mb-[56px] flex justify-between items-center' >
                   <Image src={'/logo.svg'} width={136} height={36} alt='img'/>
+                
                   <Lang/>
                 </div>
                 <div className='lg:flex  items-center w-full mb-[74px] gap-[40px] justify-between'>
-                  <Image className='w-full mx-auto  mb-[20px] lg:mb-0 opacity-0 image rounded-2xl object-cover max-w-[512px] aspect-[1.2/1]' src={'/neture.png'} width={512} height={424} alt='img'/>
+                <iframe
+                  width={512} height={424}
+                  className='w-full mx-auto  mb-[20px] lg:mb-0 opacity-0 image rounded-2xl object-cover max-w-[512px] aspect-[1.2/1]'
+                    src={embedUrl}
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowFullScreen
+                  ></iframe> 
+                  {/* <Image className='w-full mx-auto  mb-[20px] lg:mb-0 opacity-0 image rounded-2xl object-cover max-w-[512px] aspect-[1.2/1]' src={'/neture.png'} width={512} height={424} alt='img'/> */}
                     <div className='w-full lg:max-w-[549px]  opacity-0 box '>
                       <h3 className='font-semibold text-[18px] leading-[26px] md:text-[23px] md:leading-[30px] xl:text-[32px] xl:leading-[43px]  text-[#2A2A2A] mb-[16px] lg:mb-[32px]'>
                       Интеллектуальное фермерство для устойчивого будущего

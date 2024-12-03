@@ -7,7 +7,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-export default function FermerSection() {
+
+export default function FermerSection({data}:any) {
   
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
@@ -34,7 +35,7 @@ export default function FermerSection() {
 на анализе данных, с возможностью загрузки фотографий
 и добавления полей для анализа.</p>
         </div>
-        <Image className='w-full  fermet1  opacity-0  h-[220px] md:max-w-[308px] md:h-[368px] object-cover rounded-[42px]' src={'/neture.png'} width={308} height={368} alt='img'/>
+        <Image className='w-full  fermet1  opacity-0  h-[220px] md:max-w-[308px] md:h-[368px] object-cover rounded-[42px]' src={data?.our_nature_img|| '/neture.png'} width={308} height={368} alt='img'/>
     </Container>
   )
 }

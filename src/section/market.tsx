@@ -6,7 +6,9 @@ import React from 'react'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-export default function MarketSection() {
+
+
+export default function MarketSection({data}:any) {
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
     gsap.fromTo(".market", {opacity:0,x:-100}, { opacity: 1,x:0,y:0, duration: 0.7,delay:0.5, ease: "power2.out",scrollTrigger: {
@@ -20,7 +22,7 @@ export default function MarketSection() {
   }); 
   return (
     <Container className='mt-[40px] flex md:flex-row flex-col gap-4 '>
-        <Image className='w-full h-[220px] md:max-w-[308px] md:h-[368px] market opacity-0 object-cover rounded-[42px]' src={'/neture.png'} width={308} height={368} alt='img'/>
+        <Image className='w-full h-[220px] md:max-w-[308px] md:h-[368px] market opacity-0 object-cover rounded-[42px]' src={data?.marketplace_img|| '/neture.png'} width={308} height={368} alt='img'/>
         <div className='w-full bg-white rounded-2xl border-solid market1 opacity-0 border-[#53B606] border pt-[40px] pb-[88px] px-[35px] '>
             <h3 className='font-semibold  w-full max-w-[767px] mb-6 text-[18px] leading-[26px] md:text-[23px] md:leading-[30px] xl:text-[29px] xl:leading-[37.8px] flex items-center text-[#2A2A2A]'>Маркетплейс  <span className='px-1'> <TelIIcons/></span> для сельхозтоваров</h3>
             <p className='flex items-start gap-4 font-medium  leading-[18px] md:text-[16px] md:leading-[20px] xl:text-[18px] xl:leading-[26px] mt-[16px]' ><span className='w-[32px] min-[32px]'><AgroIcons1/> </span>Каталог товаров (удобрения, агрохимикаты и пр.) с возможностью выбора продукции, соответствующей фазе развития культур.</p>

@@ -14,7 +14,7 @@ import React from 'react'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-export default function HomePagae() {
+export default function HomePagae({data}:any) {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
@@ -33,15 +33,15 @@ export default function HomePagae() {
     })
   return (
     <>
-    <HeroSection/>
+    <HeroSection data={data}/>
     <SliderSection/>
     <TechSection/>
-    <FermerSection/>
+    <FermerSection data={data}/>
     <Container className='flex sm:flex-row flex-col card  opacity-0 gap-5 mt-[28px]'>
       <GrowzCard image={'/tel.png'} title={'Каталог удобрений и агрохимии с подбором под фазу роста'} text={'Каталог Growz предлагает широкий выбор удобрений и агрохимикатов с возможностью подбора продукции, идеально подходящей для текущей фазы роста ваших культур. Это обеспечивает точное и эффективное применение ресурсов для повышения урожайности.'}/>
       <GrowzCard image={'/tel.png'} title={'Каталог удобрений и агрохимии с подбором под фазу роста'} text={'Каталог Growz предлагает широкий выбор удобрений и агрохимикатов с возможностью подбора продукции, идеально подходящей для текущей фазы роста ваших культур. Это обеспечивает точное и эффективное применение ресурсов для повышения урожайности.'}/>
     </Container>
-    <MarketSection/>
+    <MarketSection data={data}/>
     <Container className='flex sm:flex-row flex-col card1 opacity-0 gap-5 mt-[28px]'>
       <GrowzCard image={'/tel.png'} title={'Каталог удобрений и агрохимии с подбором под фазу роста'} text={'Каталог Growz предлагает широкий выбор удобрений и агрохимикатов с возможностью подбора продукции, идеально подходящей для текущей фазы роста ваших культур. Это обеспечивает точное и эффективное применение ресурсов для повышения урожайности.'}/>
       <GrowzCard image={'/tel.png'} title={'Каталог удобрений и агрохимии с подбором под фазу роста'} text={'Каталог Growz предлагает широкий выбор удобрений и агрохимикатов с возможностью подбора продукции, идеально подходящей для текущей фазы роста ваших культур. Это обеспечивает точное и эффективное применение ресурсов для повышения урожайности.'}/>
@@ -51,7 +51,7 @@ export default function HomePagae() {
       <BarChart/>
       <PieChart/>
     </Container>
-    <FormSEction/>
+    <FormSEction data={data}/>
     </>
   )
 }
