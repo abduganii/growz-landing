@@ -8,7 +8,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 export default function FormSEction() {
   gsap.registerPlugin(ScrollTrigger);
   useGSAP(() => {
-    gsap.to(".from", { opacity: 1, duration: 1,delay:0.5, ease: "power1.inOut",scrollTrigger: {
+    gsap.to(".from", { opacity: 1, duration: .7,delay:0.5, ease: "power2.out",scrollTrigger: {
       toggleActions: 'restart none none reset',
       trigger: '.from',
     }})

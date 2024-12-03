@@ -6,13 +6,14 @@ import Image from 'next/image'
 import React from 'react'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { Link } from '@/i18n/routing'
 
 export default function HeroSection() {
 useGSAP(() => {
   let tl = gsap.timeline();
-  tl.to(".here", { opacity: 1, duration: 1,ease: "power2.out"})
-    .to(".image", {opacity: 1,  duration: .5,ease: "power2.out"})
-    .to(".box", {opacity: 1, duration: .5,ease: "power2.out"});
+  tl.fromTo(".here",{opacity:0,x:-15,y:25}, { opacity: 1,x:0,y:0, duration: .4,ease: "power2.out"})
+    .fromTo(".image",{opacity:0}, {opacity: 1,  duration: .4,ease: "power2.out"})
+    .fromTo(".box", {opacity:0,},{opacity: 1, duration: .4,ease: "power2.out"});
   
 }); 
   return (
@@ -39,10 +40,10 @@ useGSAP(() => {
                       </p>
                     </div>
                 </div>
-                <button className='py-[14px] ml-auto px-[26px] mr-[220px] rounded-[51px] font-medium text-[20px] leading-[27px] flex gap-[24px] items-center border-solid border border-[#B9B9B9]'>
+                <Link href={'/news'} className='py-[14px] ml-auto px-[26px] max-w-[300px] justify-center mr-[220px] rounded-[51px] font-medium text-[20px] leading-[27px] flex gap-[24px] items-center border-solid border border-[#B9B9B9]'>
                 Наши новости
                   <NavigateIcons/>
-                  </button>
+                  </Link>
                 <div className="flex gap-5 items-center bg-[#EFEFEF] p-1 pl-3 pt-3 absolute bottom-0 right-0 rounded-tl-[32px]  after:content-[''] after:absolute after:right-0 after:w-[30px] after:h-[30px] after:bg-white after:rounded-br-[32px] after:top-[-30px] before:content-[''] before:absolute before:right-0 before:w-[30px] before:h-[30px] before:bg-[#EFEFEF] before:top-[-30px]">
                   <InstaIcons/>
                   <InstaIcons/>

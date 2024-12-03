@@ -18,15 +18,15 @@ export default function HomePagae() {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
-    gsap.to(".card", { opacity: 1,x:0, duration: 4,delay:.5,ease: "power3.out", scrollTrigger: {
+    gsap.to(".card", { opacity: 1,x:0, duration: 0.7,delay:.5,ease: "power2.out", scrollTrigger: {
       toggleActions: 'restart none none reset',
       trigger: '.card',
     }})
-    gsap.to(".card1", { opacity: 1,x:0, duration: 4,delay:.5,ease: "power3.out", scrollTrigger: {
+    gsap.to(".card1", { opacity: 1,x:0, duration: 0.7,delay:.5,ease: "power2.out", scrollTrigger: {
       toggleActions: 'restart none none reset',
       trigger: '.card1',
     }})
-    gsap.to(".card2", { opacity: 1,x:0, duration: 4,delay:.5,ease: "power3.out", scrollTrigger: {
+    gsap.to(".card2", { opacity: 1,x:0, duration: 0.7,delay:.5,ease: "power2.out", scrollTrigger: {
       toggleActions: 'restart none none reset',
       trigger: '.card2',
     }})
@@ -47,7 +47,7 @@ export default function HomePagae() {
       <GrowzCard image={'/tel.png'} title={'Каталог удобрений и агрохимии с подбором под фазу роста'} text={'Каталог Growz предлагает широкий выбор удобрений и агрохимикатов с возможностью подбора продукции, идеально подходящей для текущей фазы роста ваших культур. Это обеспечивает точное и эффективное применение ресурсов для повышения урожайности.'}/>
     </Container>
     <AgroSection/>
-    <Container  className='flex md:flex-row flex-col card2  opacity-0 gap-5 mb-[28px]'>
+    <Container  className='flex lg:flex-row flex-col card2  opacity-0 gap-5 mb-[28px]'>
       <BarChart/>
       <PieChart/>
     </Container>

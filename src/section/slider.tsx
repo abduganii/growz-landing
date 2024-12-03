@@ -10,11 +10,11 @@ export default function SliderSection() {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
-    gsap.fromTo(".slitLeft",{opacity:0,x:-100},{ opacity: 1,x:0, duration: 2,delay:.5,ease: "power3.out", scrollTrigger: {
+    gsap.fromTo(".slitLeft",{opacity:0,x:-100},{ opacity: 1,x:0, duration: 0.7,delay:.5,ease: "power2.out", scrollTrigger: {
       toggleActions: 'restart none none reset',
       trigger: '.slitLeft',
     },})
-    gsap.to(".slitRight", { opacity: 1,x:0, duration: 4,delay:.5,ease: "power3.out",scrollTrigger: {
+    gsap.to(".slitRight", { opacity: 1,x:0, duration: 0.7,delay:.5,ease: "power2.out",scrollTrigger: {
         toggleActions: 'restart none none reset',
         trigger: '.slitRight',
       },})

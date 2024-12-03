@@ -8,7 +8,7 @@ export default function TechSection() {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
-    gsap.to(".tech",{ opacity: 1, duration: 3,delay:.5,ease: "power3.out", scrollTrigger: {
+    gsap.fromTo(".tech", {opacity:0,x:-100}, { opacity: 1,x:0,y:0,  duration: .7,delay:.6,ease: "power2.out", scrollTrigger: {
       toggleActions: 'restart none none reset',
       trigger: '.tech',
     },})
