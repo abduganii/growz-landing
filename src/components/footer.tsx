@@ -23,7 +23,7 @@ import { useTranslations } from 'next-intl'
       <div className='bg-white w-full pt-[40px] Footer opacity-0  flex flex-wrap md:flex-nowrap items-start gap-[50px] lg:gap-[80px] xl:gap-[126px] px-[52px] pb-[66px] rounded-[42px]'>
         <Image src={'/logo.svg'} width={136} height={36} alt='img'/>
             <div className='ml-[20px]'>
-                <p className='mb-4 text-[18px] leading-[24px] font-normal text-[#5E5E5E]'> {t('address')}</p>
+                <p className='mb-4 text-[18px] leading-[24px] font-normal text-[#5E5E5E]'> {t('set')}</p>
                 {
                     socials?.length && socials?.map((e:any)=>(
                       <a className='mb-3 w-full  flex items-center gap-2' target="_blank" href={e?.link}>
@@ -34,7 +34,7 @@ import { useTranslations } from 'next-intl'
                   }
             </div>
             <div>
-                <p className='mb-4 text-[18px] leading-[24px] font-normal text-[#5E5E5E]'>{t('set')}</p>
+                <p className='mb-4 text-[18px] leading-[24px] font-normal text-[#5E5E5E]'>{t('address')}</p>
                 <p className='mb-3 text-[18px] leading-[24px] font-normal text-[#523535]'>г. Ташкент, Юнусабадский район, Ниезбек Йули, 34а </p>
             </div>
         </div>
