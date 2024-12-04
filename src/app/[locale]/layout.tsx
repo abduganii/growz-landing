@@ -6,12 +6,17 @@ import { notFound } from "next/navigation";
 import BaseLayout from "@/layout/BaseLayout";
 import { routing } from "@/i18n/routing";
 import { NextIntlClientProvider } from "next-intl";
+import { fetchData } from "@/service/get";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({locale}));
 }
+async function getSocials() {
+  return fetchData(`${process.env.NEXT_PUBLIC_URL}/api/socials?sort=id:asc`);
+}
+
 
 export default async function RootLayout({
   children,
@@ -22,6 +27,8 @@ export default async function RootLayout({
   }
   setRequestLocale(locale);
   const messages = await getMessages();
+
+  const socials = await getSocials()
   return (
     <html lang={locale}>
       <body className={inter.className}>
@@ -37,7 +44,7 @@ export default async function RootLayout({
       shadow="0 0 10px #2299DD,0 0 5px #2299DD"
       />
       <NextIntlClientProvider  messages={messages}>
-              <BaseLayout>{children}</BaseLayout>
+              <BaseLayout socials={socials?.data || []}>{children}</BaseLayout>
       </NextIntlClientProvider>
       </body>
     </html>

@@ -27,6 +27,10 @@ button:disabled {
 .colm1{
   width: calc((100% - 48px) / 3);
 }
+.footerSvg svg{
+  width: 24px !important;
+  height: 24px !important;
+}
 
 @media screen and (max-width:1000px) {
   

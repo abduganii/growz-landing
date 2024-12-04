@@ -22,7 +22,6 @@ import { LangArr } from '../../../../musk/data';
 export default function Lang() {
   const t = useTranslations('');
   const [open, setOpen] = useState(false)
-  const pathname = usePathname()
   return (
     <>
     <div className="relative">

@@ -1,30 +1,29 @@
 "use server"
 
+import { fetchData } from "@/service/get";
 import HomePagae from "@/view/home";
 
-const res:any = {
-    data: {
-      id: 1,
-      hero_video: "https://youtu.be/AcJVy0C5WAE?si=akADCyST3Ws3y9wo",
-      instagram_link: null,
-      youtube_link: null,
-      telegram_link: null,
-      our_nature_img: null,
-      marketplace_img: null,
-      email: null,
-      phone: null,
-      createdAt:' 2024-12-03T06:06:25.366Z',
-      updatedAt: '2024-12-03T06:06:25.366Z',
-      work_time: null,
-      address: null
-    },
-    meta: {}
-}
-export default async function Home() {
 
+async function getLanding() {
+  return fetchData(`${process.env.NEXT_PUBLIC_URL}/api/landing-page`);
+}
+async function getSocials() {
+  return fetchData(`${process.env.NEXT_PUBLIC_URL}/api/socials?sort=id:asc`);
+}
+async function getSlider() {
+  return fetchData(`${process.env.NEXT_PUBLIC_URL}/api/slider-mains?populate=*`);
+}
+
+
+export default async function Home() {
+  const [landing, socials,slider] = await Promise.all([
+    getLanding(),
+    getSocials(),
+    getSlider()
+  ]);
   return (
     <>
-     <HomePagae data={res?.data}/>
+     <HomePagae data={landing?.data || {}} socials={socials?.data || []} slider={slider?.data}/>
     </>
   );
 }

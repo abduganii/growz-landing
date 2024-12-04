@@ -14,7 +14,7 @@ import React from 'react'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-export default function HomePagae({data}:any) {
+export default function HomePagae({data,socials,slider}:any) {
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
@@ -33,8 +33,8 @@ export default function HomePagae({data}:any) {
     })
   return (
     <>
-    <HeroSection data={data}/>
-    <SliderSection/>
+    <HeroSection data={data} socials={socials}/>
+    <SliderSection slider={slider}/>
     <TechSection/>
     <FermerSection data={data}/>
     <Container className='flex sm:flex-row flex-col card  opacity-0 gap-5 mt-[28px]'>
