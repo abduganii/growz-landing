@@ -7,10 +7,11 @@ import React, { useEffect, useState } from 'react'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { Link } from '@/i18n/routing'
+import { useTranslations } from 'next-intl'
 
 
 export default function HeroSection({data,socials}:any) {
-
+const t = useTranslations()
 useGSAP(() => {
   let tl = gsap.timeline();
   tl.fromTo(".here",{opacity:0,x:-15,y:25}, { opacity: 1,x:0,y:0, duration: .4,ease: "power2.out"})
@@ -50,8 +51,8 @@ useEffect(()=>{
                   ></iframe> 
                     <div className='w-full lg:max-w-[549px]  opacity-0 box '>
                       <h3 className='font-semibold text-[18px] leading-[26px] md:text-[23px] md:leading-[30px] xl:text-[32px] xl:leading-[43px]  text-[#2A2A2A] mb-[16px] lg:mb-[32px]'>
-                      Интеллектуальное фермерство для устойчивого будущего
-                      на основе   данных и ИИ
+                    
+                      {t('hereTitle')}
                       </h3>
 
                       <p className='text-[#2A2A2A] font-normal text-[14px] leading-[18px]  md:text-[17px] md:leading-[22px] xl:text-[20px] xl:leading-[27px] '>
@@ -62,7 +63,7 @@ useEffect(()=>{
                     </div>
                 </div>
                 <Link href={'/news'} className='py-[7px] md:py-[14px] ml-auto px-[13px] md:px-[26px] max-w-[300px] justify-center mr-[220px] rounded-[51px] font-medium text-[14px] leading-[18px] md:text-[20px] md:leading-[27px] flex gap-[4px] md:gap-[24px] items-center border-solid border border-[#B9B9B9]'>
-                Наши новости
+                {t('ourNew')}
                   <span className='hidden md:inline-block'> <NavigateIcons/></span>
                   </Link>
                 <div className="flex gap-5 items-center bg-[#EFEFEF] p-1 pl-3 pt-3 absolute bottom-0 right-0 rounded-tl-[32px]  after:content-[''] after:absolute after:right-0 after:w-[30px] after:h-[30px] after:bg-white after:rounded-br-[32px] after:top-[-30px] before:content-[''] before:absolute before:right-0 before:w-[30px] before:h-[30px] before:bg-[#EFEFEF] before:top-[-30px]">

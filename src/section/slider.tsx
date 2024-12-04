@@ -46,7 +46,7 @@ export default function SliderSection({slider}:any) {
               <div className='w-full relative opacity-0 slitLeft bg-white rounded-2xl pt-[40px] pb-[88px] px-[35px]'>
                 <h3 className='font-semibold  w-full max-w-[767px] mb-6 text-[18px] leading-[26px] md:text-[23px] md:leading-[30px] xl:text-[29px] xl:leading-[33px] text-[#2A2A2A]'>
                   {slid?.[`title_${locale}`]}
-                  {/* Сельское хозяйство отвечает примерно за <span className='font-extrabold  text-[#FF4E4E] relative'>30% <span className="absolute bottom-[-8px] left-0"><LineIcons/></span></span> <br /> глобальных выбросов парниковых газов, но это не всё */}
+                  Сельское хозяйство отвечает примерно за <span className='font-extrabold  text-[#FF4E4E] relative'>30% <span className="absolute bottom-[-8px] left-0"><LineIcons/></span></span> <br /> глобальных выбросов парниковых газов, но это не всё
                 </h3>
                 {
                   slid?.slider_contents?.length && slid?.slider_contents?.map((e:any)=>(
