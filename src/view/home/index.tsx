@@ -14,9 +14,10 @@ import React from 'react'
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 export default function HomePagae({data,socials,slider}:any) {
   const t = useTranslations()
+  const locale = useLocale()
   gsap.registerPlugin(ScrollTrigger);
 
   useGSAP(() => {
@@ -40,13 +41,13 @@ export default function HomePagae({data,socials,slider}:any) {
     <TechSection/>
     <FermerSection data={data}/>
     <Container className='flex sm:flex-row flex-col card  opacity-0 gap-5 mt-[28px]'>
-      <GrowzCard image={'/tel1_ru.png'} title={t('growzCardTitle1')} text={t('growzCardText1')}/>
-      <GrowzCard image={'/tel2_ru.png'} title={t('growzCardTitle2')} text={t('growzCardText2')}/>
+      <GrowzCard image={`/tel1_${locale}.png`} title={t('growzCardTitle1')} text={t('growzCardText1')}/>
+      <GrowzCard image={`/tel2_${locale}.png`} title={t('growzCardTitle2')} text={t('growzCardText2')}/>
     </Container>
     <MarketSection data={data}/>
     <Container className='flex sm:flex-row flex-col card1 opacity-0 gap-5 mt-[28px]'>
-    <GrowzCard image={'/tel3_ru.png'} title={t('growzCardTitle3')} text={t('growzCardText3')}/>
-    <GrowzCard image={'/tel4_ru.png'} title={t('growzCardTitle4')} text={t('growzCardText4')}/>
+    <GrowzCard image={`/tel3_${locale}.png`} title={t('growzCardTitle3')} text={t('growzCardText3')}/>
+    <GrowzCard image={`/tel4_${locale}.png`} title={t('growzCardTitle4')} text={t('growzCardText4')}/>
     </Container>
     <AgroSection/>
     <Container  className='flex lg:flex-row flex-col card2  opacity-0 gap-5 mb-[28px]'>
